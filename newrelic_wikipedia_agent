@@ -6,30 +6,6 @@ require "net/http"
 
 #
 #
-# NOTE: Please add the following lines to your Gemfile:
-#     gem "newrelic_plugin", git: "git@github.com:newrelic-platform/newrelic_plugin.git"
-#
-#
-# Note: You must have a config/newrelic_plugin.yml file that
-#       contains the following information in order to use
-#       this Gem:
-#
-#       newrelic:
-#         # Update with your New Relic account license key:
-#         license_key: 'put_your_license_key_here'
-#         # Set to '1' for verbose output, remove for normal output.
-#         # All output goes to stdout/stderr.
-#         verbose: 1
-#       agents:
-#         wikipedia:
-#           -
-#             hostname: "en.wikipedia.org"
-#
-#
-
-
-#
-#
 # The entire agent should be enclosed in a "WikipediaAgent" module
 #
 #
@@ -44,7 +20,7 @@ module WikipediaAgent
   class Agent < NewRelic::Plugin::Agent::Base
 
     agent_guid   "feed7770f40aa3cb72a3e4be872ec97c35aeac25"
-    agent_version "0.0.3"
+    agent_version "0.0.4"
 
     #
     # Each agent class must also include agent_human_labels. agent_human_labels requires:
