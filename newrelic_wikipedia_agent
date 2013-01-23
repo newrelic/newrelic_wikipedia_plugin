@@ -19,8 +19,8 @@ module WikipediaAgent
   #
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid   "feed7770f40aa3cb72a3e4be872ec97c35aeac25"
-    agent_version "0.0.4"
+    agent_guid   "8ff94b75628096f5ee86bfec2676bea8b056d03e"
+    agent_version "0.0.5"
 
     #
     # Each agent class must also include agent_human_labels. agent_human_labels requires:
@@ -41,13 +41,16 @@ module WikipediaAgent
 
     def setup_metrics
       @@WIKIPEDIA_STAT_URL = URI.parse("http://#{hostname}/w/api.php?action=query&format=json&meta=siteinfo&siprop=statistics")
-      @total_articles=NewRelic::Processor::Rate.new
+      @article_creation_rate = NewRelic::Processor::Rate.new
     end
 
 
     def poll_cycle
       num_articles = get_num_articles
-      report_metric("Articles/Total", "Articles/Seconds", @total_articles.process(num_articles)) if num_articles
+      if num_articles
+        report_metric("Articles/Created", "articles/sec", @article_creation_rate.process(num_articles))
+        report_metric("Articles/Article count", "articles", num_articles)
+      end
     end
 
     private
