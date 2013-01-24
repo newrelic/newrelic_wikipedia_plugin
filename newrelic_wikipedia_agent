@@ -19,7 +19,7 @@ module WikipediaAgent
   #
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid   "8ff94b75628096f5ee86bfec2676bea8b056d03e"
+    agent_guid   "fe5d7f2bd3bb583b0c9826b725cf7855d9267cba"
     agent_version "0.0.5"
 
     #
