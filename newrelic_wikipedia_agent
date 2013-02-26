@@ -19,8 +19,8 @@ module WikipediaAgent
   #
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid   "8ff94b75628096f5ee86bfec2676bea8b056d03e"
-    agent_version "0.0.5"
+    agent_guid   "com.newrelic.platform.examples.wikipedia"
+    agent_version "0.0.7"
 
     #
     # Each agent class must also include agent_human_labels. agent_human_labels requires:
@@ -49,7 +49,7 @@ module WikipediaAgent
       num_articles = get_num_articles
       if num_articles
         report_metric("Articles/Created", "articles/sec", @article_creation_rate.process(num_articles))
-        report_metric("Articles/Article count", "articles", num_articles)
+        report_metric("Articles/Count", "articles", num_articles)
       end
     end
 
