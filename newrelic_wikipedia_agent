@@ -19,7 +19,7 @@ module WikipediaAgent
   #
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid   "com.newrelic.platform.examples.wikipedia"
+    agent_guid   "com.newrelic.examples.wikipedia"
     agent_version "0.0.7"
 
     #
