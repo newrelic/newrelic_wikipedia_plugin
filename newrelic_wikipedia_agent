@@ -41,7 +41,7 @@ module WikipediaAgent
 
     def setup_metrics
       @@WIKIPEDIA_STAT_URL = URI.parse("http://#{hostname}/w/api.php?action=query&format=json&meta=siteinfo&siprop=statistics")
-      @article_creation_rate = NewRelic::Processor::Rate.new
+      @article_creation_rate = NewRelic::Processor::EpochCounter.new
     end
 
 
