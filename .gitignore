@@ -1,4 +1,3 @@
 .*.swp
 .DS_Store
-config/newrelic_plugin.yml
 /Gemfile.lock

@@ -28,4 +28,3 @@ newrelic:
 agents:
   wikipedia:
     hostname: en.wikipedia.org
-
