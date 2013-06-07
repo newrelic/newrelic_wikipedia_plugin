@@ -1,4 +1,4 @@
-## New Relic Wikipedia Extension
+## New Relic Wikipedia Plugin
 
 ### Instructions for running the Wikipedia agent
 
