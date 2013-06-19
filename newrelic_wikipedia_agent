@@ -20,7 +20,7 @@ module WikipediaAgent
   class Agent < NewRelic::Plugin::Agent::Base
 
     agent_guid   "com.newrelic.examples.wikipedia"
-    agent_version "1.0.3"
+    agent_version "1.0.4"
 
     #
     # Each agent class must also include agent_human_labels. agent_human_labels requires:
