@@ -29,7 +29,7 @@ module WikipediaAgent
     #
     # The block runs in the context of the agent instance.
     #
-    agent_human_labels("Wikipedia") { "Wikipedia" }
+    agent_human_labels("Wikipedia") { "Wikipedia #{hostname}" }
 
 
     #
