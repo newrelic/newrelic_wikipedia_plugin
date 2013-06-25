@@ -40,7 +40,7 @@ module WikipediaAgent
     agent_config_options :hostname
 
     def setup_metrics
-      @@WIKIPEDIA_STAT_URL = URI.parse("http://#{hostname}/w/api.php?action=query&format=json&meta=siteinfo&siprop=statistics")
+      @WIKIPEDIA_STAT_URL = URI.parse("http://#{hostname}/w/api.php?action=query&format=json&meta=siteinfo&siprop=statistics")
       @article_creation_rate = NewRelic::Processor::EpochCounter.new
     end
 
@@ -57,7 +57,7 @@ module WikipediaAgent
 
     def get_num_articles
       begin
-        resp = ::Net::HTTP.get_response(@@WIKIPEDIA_STAT_URL)
+        resp = ::Net::HTTP.get_response(@WIKIPEDIA_STAT_URL)
       rescue
         return nil
       end
