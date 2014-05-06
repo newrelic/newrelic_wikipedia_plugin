@@ -9,3 +9,7 @@
 1. Replace "YOUR_LICENSE_KEY_HERE" with your New Relic license key
 1. Execute `./newrelic_wikipedia_agent`
 1. Go back to the Plugins list, and after a brief period you will see an entry for the Wikipedia plugin
+
+## Contributing
+
+You are welcome to send pull requests to us - however, by doing so you agree that you are granting New Relic a non-exclusive, non-revokable, no-cost license to use the code, algorithms, patents, and ideas in that code in our products if we so choose. You also agree the code is provided as-is and you provide no warranties as to its fitness or correctness for any purpose.
